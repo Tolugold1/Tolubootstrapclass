@@ -10,6 +10,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="node_modules/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <title>Ristorante Con Fusion: About Us</title>
 
 </head>
@@ -23,10 +25,10 @@
             <a class="navbar-brand mr-auto" href="index.html">Ristorante con fixed</a>
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-info-circle fa-lg"></span> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-address-card fa-lg"></i> Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><i class="fa fa-address-card-o fa-lg"></i> Contact</a></li>
                 </ul>
             </div>
             
@@ -58,13 +60,40 @@
             </div>
         </div>
 
-        <div class="row-content">
+        <div class="row row-content">
             <div class="col-12 col-sm-6">
                 <h2>Our History</h2>
                 <p>Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.</p>
                 <p>The restaurant traces its humble beginnings to <em>The Frying Pan</em>, a successful chain started by our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.</p>
             </div>
-            <div>
+            <div class="col-12 col-sm-6">
+                <div class="card">
+                    <h2 class="card-header text-white justify-content-center">Facts at a glance</h2>
+                    <div class="card-body">
+                        <dl class="row mb-3">
+                            <dt class="col-6">Started</dt>
+                            <dd class="col-6">3 Feb. 2013</dd>
+                            <dt class="col-6">Major Stake Holder</dt>
+                            <dd class="col-6">HK Fine Foods Inc.</dd>
+                            <dt class="col-6">Last Year's Turnover</dt>
+                            <dd class="col-6">$1,250,375</dd>
+                            <dt class="col-6">Employees</dt>
+                            <dd class="col-6">40</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card card-body bg-light">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">You better cut the pizza in four pieces because
+                            I'm not hungry enough to eat six.</p>
+                            <footer class="blockquote-footer">Yogi Berra,
+                                <cite class="Source Title">The Wit and Wisdom of Yogi Berra,
+                                    P. Pepe, Diversion Books, 2014</cite>
+                            </footer>
+                    </blockquote>
+                </div>
             </div>
         </div>
 
@@ -82,7 +111,52 @@
                 <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>
             </div>
        </div>
+        <div class="row row-content">
+            <div class="col-12 col-sm-9">
+                <h2>Facts, &amp; Figures</h2>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>&amp</th>
+                                <th>2013</th>
+                                <th>2014</th>
+                                <th>2015</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Employees</th>
+                                <td>15</td>
+                                <td>20</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <th>Guests served</th>
+                                <td>15000</td>
+                                <td>45000</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <th>Special Events</th>
+                                <td>3</td>
+                                <td>20</td>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <th>Annual Turnover</th>
+                                <td>$251,325</td>
+                                <td>$1,250,375</td>
+                                <td>~$3,000,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3">
 
+            </div>
+        </div>
     </div>
 
     <footer class="footer">
@@ -94,7 +168,7 @@
                         <li><a href="./index.html">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="./contactus.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-7 col-sm-5">
@@ -103,19 +177,19 @@
 		              121, Clear Water Bay Road<br>
 		              Clear Water Bay, Kowloon<br>
 		              HONG KONG<br>
-		              Tel.: +852 1234 5678<br>
-		              Fax: +852 8765 4321<br>
-		              Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
+		              <i class="fa fa-phone fg-lg"></i>: +852 1234 5678<br>
+		              <i class="fa fa-fax fg-lg"></i>: +852 8765 4321<br>
+		              <i class="fa fa-envelope fg-lg"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
 		           </address>
                 </div>
                 <div class="col-12 col-sm-4 align-self-center">
                     <div class="text-center">
-                        <a href="http://google.com/+">Google+</a>
-                        <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
-                        <a href="http://www.linkedin.com/in/">LinkedIn</a>
-                        <a href="http://twitter.com/">Twitter</a>
-                        <a href="http://youtube.com/">YouTube</a>
-                        <a href="mailto:">Mail</a>
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fg-lg"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fg-lg"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fg-lg"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fg-lg"></i></a>
+                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube fg-lg"></i></a>
+                        <a class="btn btn-social-icon btn-envelope-o" href="mailto:"><i class="fa fa-envelope-o fg-lg"></i></a>
                     </div>
                 </div>
            </div>
@@ -126,7 +200,9 @@
            </div>
         </div>
     </footer>
-    
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
