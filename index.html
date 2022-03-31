@@ -80,11 +80,82 @@
                     <img class="img-fluid" src="img/logo.png">
                 </div>
                 <div class="col-12 col-sm col-md align-self-center">
-                    <a href="#reserve" class="btn nav-link btn-block btn-warning" type="button" data-toggle="tooltip" data-placement="bottom" title="or call us on <br><strong>08148758013</strong>" data-html="true" role='button'>Reserve Table</a>
+                    <a class="btn nav-link btn-block btn-warning" type="button" data-target="#reserve" data-toggle="modal">Reserve Table</a>
                 </div>
             </div>
         </div>
     </header>
+    <div class="modal fade" id="reserve" role="dialog">
+        <div class="modal-dialog" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reserve">Reserved a table</h5>
+                    <button type="button" data-dismiss="modal" class="close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="guest">Number of Guest</label>
+                            </div>
+                            <div class="form-group col-sm-8 offset-sm-1">
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="guest">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="guest">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="guest">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="guest">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-inut" name="guest">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="guest">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="section">Section</label>
+                            </div>
+                            <div class="form-group col-sm-6 offset-sm-1">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active ">
+                                        <input type="radio" name="habit" autocomplete="off">Non-smoking
+                                    </label>
+                                    <label class="btn btn-danger" >
+                                        <input type="radio" name="habit" autocomplete="off">Smoking
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="dateandtime">Date and Time</label>
+                            </div>
+                            <div class="form-group col-sm-4 offset-sm-1">
+                                <input type="text" class="form-control visually-hidden" placeholder="Date" name="date"> 
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <input type="text" class="form-control visually-hidden" placeholder="Time" name="Time"> 
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-sm-4 offset-sm-3">
+                                <button class="btn btn-secondary btn-sm" data-toggle="buttons" type="button" data-dismiss="modal">Cancel</button>
+                                <button class="btn btn-primary btn-sm" type="button" data-toggle="buttons">Reserve</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="row row-content">
@@ -127,6 +198,15 @@
                 <a class="carousel-control-next" type="button" data-target="#menu" data-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </a>
+
+                <div class="btn btn-group" id="carousel-event">
+                    <button type="button" class="btn btn-danger btn-sm" id="carousel-pause">
+                        <span class="fa fa-pause"></span>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm" id="carousel-play">
+                        <span class="fa fa-play"></span>
+                    </button>
+                </div>
             </div>
            </div>
 
@@ -178,7 +258,7 @@
             </div>
         </div>
     </div>
-    <div class="container" id="reserve">
+    <div class="container" id="reserv8">
         <div class="row row-content ">
             <div class="col-12 col-sm-8 offset-sm-2">
                 <div class="card">
@@ -229,7 +309,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="offset-sm-2 col-sm-10">
+                             <div class="offset-sm-2 col-sm-10">
                                 <button type="button" class="btn btn-primary">Reserve</button>
                             </div>
                         </div>
@@ -285,10 +365,16 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip()
+        $(document).ready(function (){
+            $('#menu').carousel({interval: 2000});
+            $('#carousel-pause').click(function(){
+                $('#menu').carousel('pause')
+            });
+
+            $('#carousel-play').click(function(){
+                $('#menu').carousel('cycle');
+            });
         });
     </script>
 </body>
-
 </html>
