@@ -8,10 +8,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="node_modules/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <!-- endbuild -->
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -30,7 +32,7 @@
                 <li class="nav-item"><a class="nav-link" href="./contactus.html"><i class="fa fa-address-card-o fa-lg"></i> Contact</a></li>
             </ul>
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginModal"><i class="fa fa-sign-in"></i> Login</a>
+                <a id="loginModal1"><i class="fa fa-sign-in"></i> Login</a>
             </span>
         </div>
     </div>
@@ -80,7 +82,7 @@
                     <img class="img-fluid" src="img/logo.png">
                 </div>
                 <div class="col-12 col-sm col-md align-self-center">
-                    <a class="btn nav-link btn-block btn-warning" type="button" data-target="#reserve" data-toggle="modal">Reserve Table</a>
+                    <a class="btn nav-link btn-block btn-warning" type="button" id="reservemodal">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -356,25 +358,11 @@
         </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function (){
-            $('#menu').carousel({interval: 2000});
-            $('#carouselButton').click(function(){
-                if ($('#carouselButton').children('span').hasClass('fa-pause')) {
-                    $('#menu').carousel('pause');
-                    $('#carouselButton').children('span').removeClass('fa-pause');
-                    $('#carouselButton').children('span').addClass('fa-play');
-                } else if ($('#carouselButton').children('span').hasClass('fa-play')) {
-                    $('#menu').carousel('cycle');
-                    $('#carouselButton').children('span').removeClass('fa-play');
-                    $('#carouselButton').children('span').addClass('fa-pause');
-                }
-                
-            });
-        });
-    </script>
+    <script src="js/script.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

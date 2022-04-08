@@ -1,0 +1,74 @@
+@lt-grey: #ddd;
+@background-dark: #512DA8;
+@backdround-light: #9575CD;
+@background-pale: #D1CAE9;
+
+// HEIGHT VARIABLE
+@carousel-item-height: 300px;
+
+.zero-margin (@pad-up-dn: 0px, @pad-left-right: 0px) {
+  margin: 0px auto;
+  padding: @pad-up-dn  @pad-left-right;
+}
+
+.row-header {
+  .zero-margin(0px, auto);
+}
+.row-content {
+  .zero-margin(50px, 0px);
+  border-bottom: 1px ridge;
+  min-height: 400px;
+}
+
+footer {
+  .zero-margin(20px, 0px);
+  background-color: @background-pale;
+}
+
+.jumbotron {
+  .zero-margin(70px,30px);
+  background-color: @backdround-light;
+  color: floralwhite;
+}
+
+address {
+  font-size: 80%;
+  margin: 0px;
+  color: #0f0f0f;
+}
+
+body {
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
+}
+
+.navbar-dark {
+  background-color: @background-dark;
+}
+
+.carousel {
+  background: @background-dark;
+
+  .carousel-item {
+    height: @carousel-item-height;
+
+    img {
+      top: 0;
+      left: 0;
+      position:absolute;
+      height: @carousel-item-height;
+
+      .carousel-caption {
+        padding-top: 5px;
+        padding-bottom: 35px;
+      }
+    }
+  }
+}
+
+#carouselButton {
+  right: 0px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
+}
